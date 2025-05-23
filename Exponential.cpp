@@ -89,14 +89,18 @@ bool Exponential::operator==(const Exponential& E) {
 //Implementazione setter dei parametri dell'oggetto Exponential --> Metodo per impostare i coefficienti di exponential
 void Exponential::SetExponential(double b_coefficient, double k_coefficient, double c_coefficient) {
 	// Controlla se il coefficiente b > 0, altrimenti stampa messaggio di errore e termina l'esecuzione del programma
-	if (b_coeff < 0 || b_coeff == 0 ) {
+	if (b_coefficient <= 0) {
 		ErrorMessage("The object has coefficient b <= 0");
-		exit(-1);
+		isValid = false;
+		return;
+	} 
+	else {
+		b_coeff = b_coefficient;
+		k_coeff = k_coefficient;
+		c_coeff = c_coefficient;
+		isValid = true;
+		return;
 	}
-	
-	b_coeff = b_coefficient;
-	k_coeff = k_coefficient;
-	c_coeff = c_coefficient;
 }
 
 /// @brief returns the value of the function, given an input 
@@ -106,7 +110,7 @@ void Exponential::SetExponential(double b_coefficient, double k_coefficient, dou
 double Exponential::GetValue(double in) {
 
 	//Verifico se b > 0
-    if (b_coeff > 0) {
+    if (isValid) {
         return k_coeff * (pow(b_coeff, c_coeff * in)); // --> K * [b ^ (cx)]
 	}
 	else {
@@ -162,4 +166,11 @@ void Exponential::Dump() {
 	cout << "Base:" << b_coeff << endl;
 	cout << "Exponent Coefficient:" << c_coeff << endl;
 	cout << endl;
+}
+
+/// @brief Checks if the Exponential object is in a valid state
+/// @return true if the object is valid, false otherwise
+// Ritorna lo stato di validità dell'oggetto; utile per evitare errori in fase di utilizzo
+bool Exponential::IsValid() const {
+    return isValid;
 }

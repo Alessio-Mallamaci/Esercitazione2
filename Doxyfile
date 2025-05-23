@@ -54,7 +54,7 @@ PROJECT_NUMBER         =
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = Command-line user interface for selecting actions to perform with algebraic functions: polynomial, exponential, and power.
+PROJECT_BRIEF          = Command-line user interface for selecting actions to perform with algebraic functions: Polynomial, Exponential and Power.
 
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included

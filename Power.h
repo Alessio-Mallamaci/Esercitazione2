@@ -1,5 +1,5 @@
 /*! @file Power.h
-    @brief A class for power functions
+    @brief A class for Power functions
     @author Alessio Mallamaci e Alessio Pedretti
 
     Details.

@@ -129,7 +129,7 @@ void Power::ErrorMessage(const char *string){
 //Stampa tutte le caratteristiche dell'oggetto
 void Power::Dump(){
 
-	cout << "Power:" << k_coeff << "*x^" << e_coeff << endl << endl;
+	cout << "Power:" << k_coeff << "*x^" << e_coeff << endl;
 	cout << "Base Coefficient(k):" << k_coeff<< endl;
-	cout << "Exponent(e):" << e_coeff << endl;
+	cout << "Exponent(e):" << e_coeff << endl << endl;
 }

@@ -239,6 +239,7 @@ void Polynomial::Dump() {
 		return;
 	}
 	
+	cout << "Polynomial: ";
 	//Ciclo for che attraversa tutti i coefficienti del polinomio, dall'indice 0 fino al grado massimo
     for (i = 0; i <= degree; ++i) {
 		if (coeff[i] != 0.) { 											//Viene stampato solo se il coefficiente è diverso da 0, in modo da non visualizzare termini nulli
@@ -250,5 +251,5 @@ void Polynomial::Dump() {
                 }
         }
     }
-	cout << endl;
+	cout << endl << endl;
 }
